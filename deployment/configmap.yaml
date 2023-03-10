@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: db-env
+data:
+  DB_NAME: "hoagkub_psql"
+  DB_USERNAME: "hoagkub_u"
+  DB_HOST: "postgresql-service"
+  DB_PORT: "5432"
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: db-secret
+type: Opaque
+data:
+  DB_PASSWORD: bXlwYXNzd29yZA==

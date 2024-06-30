@@ -108,16 +108,24 @@ The benefit here is that it's explicitly set. However, note that the `DB_PASSWOR
 5. Check AWS CloudWatch for application logs
 
 ### Deliverables
-1. `Dockerfile`
-2. Screenshot of AWS CodeBuild pipeline
-3. Screenshot of AWS ECR repository for the application's repository
-4. Screenshot of `kubectl get svc`
-5. Screenshot of `kubectl get pods`
-6. Screenshot of `kubectl describe svc <DATABASE_SERVICE_NAME>`
-7. Screenshot of `kubectl describe deployment <SERVICE_NAME>`
-8. All Kubernetes config files used for deployment (ie YAML files)
-9. Screenshot of AWS CloudWatch logs for the application
-10. `README.md` file in your solution that serves as documentation for your user to detail how your deployment process works and how the user can deploy changes. The details should not simply rehash what you have done on a step by step basis. Instead, it should help an experienced software developer understand the technologies and tools in the build and deploy process as well as provide them insight into how they would release new builds.
+1. `Dockerfile` - Refer to [`analytics/Dockerfile`](analytics/Dockerfile)
+2. Screenshot of AWS CodeBuild pipeline - Refer to [`AWS_CodeBuild_pipeline.png`](AWS_CodeBuild_pipeline.png)
+3. Screenshot of AWS ECR repository for the application's repository - Refer to [`AWS_ECR_repository.png`](AWS_ECR_repository.png)
+4. Screenshot of `kubectl get svc` - Refer to [`kubectl_get_svc.png`](kubectl_get_svc.png)
+5. Screenshot of `kubectl get pods` - Refer to [`kubectl_get_pods.png`](kubectl_get_pods.png)
+6. Screenshot of `kubectl describe svc <DATABASE_SERVICE_NAME>` - Refer to [`kubectl_describe_svc_postgresql_service.png`](kubectl_describe_svc_postgresql_service.png)
+7. Screenshot of `kubectl describe deployment <SERVICE_NAME>` - Refer to [`kubectl_describe_deploy_postgresql.png`](kubectl_describe_deploy_postgresql.png) for database deployment, and [`kubectl_describe_deploy_coworking.png`](kubectl_describe_deploy_coworking.png) for app deployment
+8. All Kubernetes config files used for deployment (ie YAML files) - Refer to:
+
+- [`postgresql-deployment.yaml`](postgresql-deployment.yaml)
+- [`postgresql-service.yaml`](postgresql-service.yaml)
+- [`pv.yaml`](pv.yaml)
+- [`pvc.yaml`](pvc.yaml)
+- [`deployment/configmap.yaml`](deployment/configmap.yaml)
+- [`deployment/coworking.yaml`](deployment/coworking.yaml)
+
+9. Screenshot of AWS CloudWatch logs for the application - Refer to [`AWS_CloudWatch_Container_Insights_logs.png`](AWS_CloudWatch_Container_Insights_logs.png)
+10. `README.md` file in your solution that serves as documentation for your user to detail how your deployment process works and how the user can deploy changes. The details should not simply rehash what you have done on a step by step basis. Instead, it should help an experienced software developer understand the technologies and tools in the build and deploy process as well as provide them insight into how they would release new builds. - Refer to [`commands`](commands)
 
 
 ### Stand Out Suggestions

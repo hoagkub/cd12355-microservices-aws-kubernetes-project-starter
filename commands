@@ -265,3 +265,18 @@ kubectl get svc
 curl a7f36b6661dff4c30ac27662e87634b2-1870009062.us-east-1.elb.amazonaws.com:5153/health_check
 curl a7f36b6661dff4c30ac27662e87634b2-1870009062.us-east-1.elb.amazonaws.com:5153/api/reports/daily_usage
 curl a7f36b6661dff4c30ac27662e87634b2-1870009062.us-east-1.elb.amazonaws.com:5153/api/reports/user_visits
+
+# CloudWatch
+
+aws iam attach-role-policy \
+--role-name eksctl-hoagkub-cluster-nodegroup-m-NodeInstanceRole-WFVI6HLo3bVz \
+--policy-arn arn:aws:iam::aws:policy/CloudWatchAgentServerPolicy
+
+aws eks create-addon --addon-name amazon-cloudwatch-observability --cluster-name hoagkub-cluster
+
+kubectl get pods
+kubectl get svc
+
+curl a7f36b6661dff4c30ac27662e87634b2-1870009062.us-east-1.elb.amazonaws.com:5153/health_check
+curl a7f36b6661dff4c30ac27662e87634b2-1870009062.us-east-1.elb.amazonaws.com:5153/api/reports/daily_usage
+curl a7f36b6661dff4c30ac27662e87634b2-1870009062.us-east-1.elb.amazonaws.com:5153/api/reports/user_visits

@@ -262,6 +262,6 @@ kubectl apply -f deployment/coworking.yaml
 
 kubectl get svc
 
-curl a134c2b6aceac4be3bb9f46f52e15ada-2036005372.us-east-1.elb.amazonaws.com:5153/health_check
-curl a134c2b6aceac4be3bb9f46f52e15ada-2036005372.us-east-1.elb.amazonaws.com:5153/api/reports/daily_usage
-curl a134c2b6aceac4be3bb9f46f52e15ada-2036005372.us-east-1.elb.amazonaws.com:5153/api/reports/user_visits
+curl a7f36b6661dff4c30ac27662e87634b2-1870009062.us-east-1.elb.amazonaws.com:5153/health_check
+curl a7f36b6661dff4c30ac27662e87634b2-1870009062.us-east-1.elb.amazonaws.com:5153/api/reports/daily_usage
+curl a7f36b6661dff4c30ac27662e87634b2-1870009062.us-east-1.elb.amazonaws.com:5153/api/reports/user_visits

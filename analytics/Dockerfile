@@ -1,4 +1,4 @@
-FROM --platform=linux/arm64 python:3.8-slim-buster AS build
+FROM python:3.10-slim-buster
 
 COPY . /app
 
